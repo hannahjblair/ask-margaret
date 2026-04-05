@@ -1,4 +1,4 @@
-  let answers = [
+let answers = [
     "Behind all things are reasons. Reasons can even explain the absurd.",
     "Watch, and see what life teaches",
     "All that we see in this world is based on someone's ideas. Some ideas are destructive, some are constructive. Some ideas can arrive in the forms of a dream. I can say it again: Some ideas arrive in the form of a dream",
@@ -17,6 +17,8 @@
     "There are clues everywhere, all around us. But the puzzle maker is clever. The clues, although surrounding us, are somehow mistaken for something else. And the something else, the wrong interpretation of the clues, we call our world. Our world is a magical smoke screen. How should we interpret the happy song of the meadowlark or the robust flavor of a wild strawberry?"
   ]
 
-  let randomIndex = [Math.floor(Math.random() * 16)];
-  console.log(answers[randomIndex]);
+  let randomIndex = [Math.floor(Math.random() * answers.length)];
+//   console.log(answers[randomIndex]);
+
+document.getElementById("the-answer").innerHTML = answers[randomIndex];
 
