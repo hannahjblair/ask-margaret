@@ -16,9 +16,16 @@ let answers = [
     "Sometimes, well let's say all times, things are changing",
     "There are clues everywhere, all around us. But the puzzle maker is clever. The clues, although surrounding us, are somehow mistaken for something else. And the something else, the wrong interpretation of the clues, we call our world. Our world is a magical smoke screen. How should we interpret the happy song of the meadowlark or the robust flavor of a wild strawberry?"
   ]
-
+//picks random number to later use to choose the quote from the answers array
   let randomIndex = [Math.floor(Math.random() * answers.length)];
 //   console.log(answers[randomIndex]);
 
+//puts the random log lady quote in the p element with the the-answer id
 document.getElementById("the-answer").innerHTML = answers[randomIndex];
 
+//displays the question the user types in on the page
+//used https://www.3schools.in/2023/08/how-to-display-user-input-in-javascript.html for instructions on below function
+function displayInput() {
+    var userInput = document.getElementById("userInput").value;
+    document.getElementById("user-question").innerText = userInput;
+}

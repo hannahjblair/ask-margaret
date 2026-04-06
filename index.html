@@ -14,12 +14,13 @@
 <body>
     <main>
         <img src="loglady.webp" alt="Log Lady holding a log"> 
-        <p>My log has something to tell you. But first- what do you want to ask me?</p>
-        <p id="user-question"></p>
-        <p id="the-answer"></p>
-        <form>
-            <input type="text">
-            <input type="submit" value=" &#8593 ">
+        <p class="margaret">My log has something to tell you. But first- what do you want to ask me?</p>
+        <p class="user" id="user-question"></p>
+        <p class="margaret" id="the-answer"></p>
+        <form name="submit">
+            <input id="userInput" name="thequestion" type="text">
+            <button type="button" onclick="displayInput()"> &#8593 </button>
+            <!-- <input type="submit" value=" &#8593 "> -->
         </form>
 
     </main>
