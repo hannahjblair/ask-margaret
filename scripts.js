@@ -21,7 +21,10 @@ let answers = [
 //   console.log(answers[randomIndex]);
 
 //puts the random log lady quote in the p element with the the-answer id
-document.getElementById("the-answer").innerHTML = answers[randomIndex];
+function displayQuote() {
+    document.getElementById("the-answer").innerHTML = answers[randomIndex];
+}
+
 
 //displays the question the user types in on the page
 //used https://www.3schools.in/2023/08/how-to-display-user-input-in-javascript.html for instructions on below function
@@ -29,3 +32,8 @@ function displayInput() {
     var userInput = document.getElementById("userInput").value;
     document.getElementById("user-question").innerText = userInput;
 }
+
+
+//To Do: Clear the text the user inputs into the text box once they click the button
+// make a new quote appear with a new question/ click of the button
+//make the quote/ log lady's answer delayed from the button click 
