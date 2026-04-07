@@ -2,7 +2,7 @@ let answers = [
     "Behind all things are reasons. Reasons can even explain the absurd.",
     "Watch, and see what life teaches",
     "All that we see in this world is based on someone's ideas. Some ideas are destructive, some are constructive. Some ideas can arrive in the forms of a dream. I can say it again: Some ideas arrive in the form of a dream",
-    "There is a sadness in this world, for we are ignorant of many things. Yes- we are ignorant of many beautiful things. Things like the truth.So sadness in our ignorance is very real. The tears are real. What is this thing called a tear? There are even tiny ducts- tear ducts- to produce thhese tears should the sadness occur.",
+    "There is a sadness in this world, for we are ignorant of many things. Yes- we are ignorant of many beautiful things. Things like the truth. So sadness in our ignorance is very real. The tears are real. What is this thing called a tear? There are even tiny ducts- tear ducts- to produce thhese tears should the sadness occur.",
     "Then the day when the sadness comes. Then we ask, 'Will the sadness which makes me cry, will the sadness that makes me cry my heart out, will it ever end?' The answer, of course, is yes. One day, the sadness will end.",
     "I play my part on life's stage. I tell what I can to form the perfect answer. But that answer cannot come before all are ready to hear.",
     "Stars, moons, and planets remind us of protons, neutrons, and electrons. Is there a bigger being walking with all the stars within? Does our thinking affect what goes on outside us, and what goes on inside us? I think it does. those horrible times when we see the eyes – eyes that have no soul, then we know a darkness. Then we wonder: where is the beauty? There is none, if the eyes are soulless.",
@@ -33,6 +33,8 @@ function displayInput() {
     document.getElementById("user-question").innerText = userInput;
 }
 
+document.getElementById("btn").addEventListener("click", displayInput);
+document.getElementById("btn").addEventListener("click", displayQuote);
 
 //To Do: Clear the text the user inputs into the text box once they click the button
 // make a new quote appear with a new question/ click of the button
