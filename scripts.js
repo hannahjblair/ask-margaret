@@ -17,11 +17,9 @@ let answers = [
     "There are clues everywhere, all around us. But the puzzle maker is clever. The clues, although surrounding us, are somehow mistaken for something else. And the something else, the wrong interpretation of the clues, we call our world. Our world is a magical smoke screen. How should we interpret the happy song of the meadowlark or the robust flavor of a wild strawberry?"
   ]
 //picks random number to later use to choose the quote from the answers array
-  let randomIndex = [Math.floor(Math.random() * answers.length)];
-//   console.log(answers[randomIndex]);
-
 //puts the random log lady quote in the p element with the the-answer id
 function displayQuote() {
+    let randomIndex = [Math.floor(Math.random() * answers.length)];
     document.getElementById("the-answer").innerHTML = answers[randomIndex];
 }
 
