@@ -23,6 +23,7 @@ let answers = [
 function displayQuote() {
     let randomIndex = [Math.floor(Math.random() * answers.length)];
     document.getElementById("the-answer").innerText = answers[randomIndex];
+    // myTimeout = setTimeout (displayQuote, 3000); changes the quote every 3 seconds after the button is clicked :(
 }
 
 
@@ -35,9 +36,24 @@ function displayInput() {
     document.getElementById("userInput").value = "";
 }
 
+function showReply() {
+    document.getElementById("the-answer").style.display = "block";
+}
+
+function showAnswer() {
+    document.getElementById("user-question").style.display = "block";
+}
+
+
 //calls the diplayQuote and displayInput functions when the button is clicked
 document.getElementById("btn").addEventListener("click", displayInput);
 document.getElementById("btn").addEventListener("click", displayQuote);
+
+//calls functions to show the-answer and user/question when button is clicked
+document.getElementById("btn").addEventListener("click", showReply);
+document.getElementById("btn").addEventListener("click", showAnswer);
+
+
 
 //To Do:
 //make the quote/ log lady's answer delayed from the button click 
