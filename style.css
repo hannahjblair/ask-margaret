@@ -10,18 +10,38 @@ img {
     background-color: #3DDC84;
     padding: 1em;
     border-radius: 25px;
+    margin-right: 12em;
+    text-align: left;
 }
 
 .user {
     background-color: #e6e6e6;
     padding: 1em;
     border-radius: 25px;
+    text-align: right;
 }
 
 #the-answer {
     display: none;
+    margin-right: 10em;
 }
 
 #user-question {
     display: none;
+    margin-left: 10em;
+
+}
+
+@media only screen and (min-width: 1100px) {
+    .texts {
+        margin-right: 20em;
+        margin-left: 20em;
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+    .texts {
+        margin-right: 30em;
+        margin-left: 30em;
+    }
 }
