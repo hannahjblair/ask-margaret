@@ -16,24 +16,28 @@ let answers = [
     "Sometimes, well let's say all times, things are changing",
     "There are clues everywhere, all around us. But the puzzle maker is clever. The clues, although surrounding us, are somehow mistaken for something else. And the something else, the wrong interpretation of the clues, we call our world. Our world is a magical smoke screen. How should we interpret the happy song of the meadowlark or the robust flavor of a wild strawberry?"
   ]
+
+
 //picks random number to later use to choose the quote from the answers array
 //puts the random log lady quote in the p element with the the-answer id
 function displayQuote() {
     let randomIndex = [Math.floor(Math.random() * answers.length)];
-    document.getElementById("the-answer").innerHTML = answers[randomIndex];
+    document.getElementById("the-answer").innerText = answers[randomIndex];
 }
 
 
 //displays the question the user types in on the page
 //used https://www.3schools.in/2023/08/how-to-display-user-input-in-javascript.html for instructions on below function
+//last line of function clears the textbox after the user's input is diplayed in the user-question <p>.
 function displayInput() {
-    var userInput = document.getElementById("userInput").value;
+    let userInput = document.getElementById("userInput").value;
     document.getElementById("user-question").innerText = userInput;
+    document.getElementById("userInput").value = "";
 }
 
+//calls the diplayQuote and displayInput functions when the button is clicked
 document.getElementById("btn").addEventListener("click", displayInput);
 document.getElementById("btn").addEventListener("click", displayQuote);
 
-//To Do: Clear the text the user inputs into the text box once they click the button
-// make a new quote appear with a new question/ click of the button
+//To Do:
 //make the quote/ log lady's answer delayed from the button click 
