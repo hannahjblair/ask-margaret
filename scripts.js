@@ -44,6 +44,17 @@ function showAnswer() {
     document.getElementById("user-question").style.display = "block";
 }
 
+//triggers a button click when enter key is pressed, adapted from https://stackabuse.com/bytes/triggering-button-click-with-javascript-on-enter-key-press/
+document.getElementById('userInput').addEventListener('keydown', function(event) {
+  // Check if Enter was pressed
+  if (event.keyCode === 13) {
+    // Prevent the default action
+    event.preventDefault();
+    
+    // Trigger the button click
+    document.getElementById('btn').click();
+  }
+});
 
 //calls the diplayQuote and displayInput functions when the button is clicked
 document.getElementById("btn").addEventListener("click", displayInput);
@@ -56,4 +67,6 @@ document.getElementById("btn").addEventListener("click", showAnswer);
 
 
 //To Do:
-//make the quote/ log lady's answer delayed from the button click 
+//make the quote/log lady's answer delayed from the button click 
+//make the user question show on page when the user hits enter instead of clicking the button
+//figure out a response if user doesn't type anything but still clicks the button or hits enter
