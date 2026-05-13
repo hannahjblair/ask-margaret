@@ -23,8 +23,8 @@ let answers = [
 function displayQuote() {
     let randomIndex = [Math.floor(Math.random() * answers.length)];
     document.getElementById("the-answer").innerText = answers[randomIndex];
-    // myTimeout = setTimeout (displayQuote, 3000); changes the quote every 3 seconds after the button is clicked :(
 }
+
 
 
 //displays the question the user types in on the page
@@ -36,8 +36,12 @@ function displayInput() {
     document.getElementById("userInput").value = "";
 }
 
+
+//keeps the styling/background from displaying until the button is clicked so there aren't grey and green blobs with no text before the button is pressed
 function showReply() {
+    setTimeout(() => {
     document.getElementById("the-answer").style.display = "block";
+  }, 3000);
 }
 
 function showAnswer() {
@@ -67,6 +71,5 @@ document.getElementById("btn").addEventListener("click", showAnswer);
 
 
 //To Do:
-//make the quote/log lady's answer delayed from the button click 
-//make the user question show on page when the user hits enter instead of clicking the button
 //figure out a response if user doesn't type anything but still clicks the button or hits enter
+
